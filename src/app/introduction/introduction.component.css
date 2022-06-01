@@ -1,0 +1,15 @@
+.grid {
+  display: grid;
+  grid-template-columns: 30% 50% 20%;
+  grid-column-gap: 10px;
+}
+.grid > div {
+  border: 2px;
+  border-color: black;
+  border-style: solid;
+}
+.chart {
+  min-width: 200px;
+  max-width: 375px;
+  margin: auto;
+}

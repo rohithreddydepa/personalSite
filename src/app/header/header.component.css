@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Lobster&family=Noticia+Text:ital@1&family=Sansita+Swashed:wght@300&display=swap");
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+@media only screen and (max-width: 768px) {
+  .header {
+    background-position: 80% !important;
+  }
+}
+.header {
+  background: url("../../assets/rohith.jpg") no-repeat top center fixed;
+  background-size: cover;
+  height: 765px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.content {
+  position: absolute;
+  top: 38%;
+  left: 15%;
+  margin-top: -29px;
+}
+.name {
+  font-size: 60px;
+  font-family: "Noticia Text", serif;
+}
+.hi {
+  font-family: "brandon grotesque", brandon, helvetica, sans-serif;
+  font-size: 35px;
+}
