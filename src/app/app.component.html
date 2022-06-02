@@ -1,7 +1,15 @@
-<div [ngClass]="dark ? 'dark' : 'light'">
+<div class="theme-wrapper" (click)="changeTheme()">
+  <img
+    [src]="dTheme ? '../assets/light.svg' : '../assets/dark.svg'"
+    alt="Theme toggle"
+    class="theme-btn"
+  />
+</div>
+<i class="fa-solid fa-circle-half-stroke theme-btn"></i>
+<div [ngClass]="dTheme ? 'dark' : 'light'">
   <app-header></app-header>
-  <!-- <app-video></app-video> -->
   <app-introduction></app-introduction>
+  <app-skills></app-skills>
   <app-projects></app-projects>
   <app-footer></app-footer>
 </div>

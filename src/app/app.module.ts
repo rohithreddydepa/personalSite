@@ -13,6 +13,7 @@ import { TimelineModule } from 'primeng/timeline';
 import { ProjectsComponent } from './projects/projects.component';
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
+import { SkillsComponent } from './skills/skills.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +22,7 @@ import { ButtonModule } from 'primeng/button';
     IntroductionComponent,
     FooterComponent,
     ProjectsComponent,
+    SkillsComponent,
   ],
   imports: [
     BrowserModule,
