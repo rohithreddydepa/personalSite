@@ -9,7 +9,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { IntroductionComponent } from './introduction/introduction.component';
 import { FooterComponent } from './footer/footer.component';
 import { ChartModule } from 'primeng/chart';
-
+import { TimelineModule } from 'primeng/timeline';
+import { ProjectsComponent } from './projects/projects.component';
+import { CardModule } from 'primeng/card';
+import { ButtonModule } from 'primeng/button';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,6 +20,7 @@ import { ChartModule } from 'primeng/chart';
     VideoComponent,
     IntroductionComponent,
     FooterComponent,
+    ProjectsComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,6 +28,9 @@ import { ChartModule } from 'primeng/chart';
     FormsModule,
     HttpClientModule,
     ChartModule,
+    TimelineModule,
+    CardModule,
+    ButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,18 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-
+import { environment } from 'src/environments/environment';
 @Component({
   selector: 'app-introduction',
   templateUrl: './introduction.component.html',
-  styleUrls: ['./introduction.component.css'],
+  styleUrls: ['./introduction.component.scss'],
 })
 export class IntroductionComponent implements OnInit {
   data: any;
   chartOptions: any;
+  config = { dark: environment.dark };
   constructor() {}
 
   ngOnInit() {
     this.data = {
-      labels: ['DataBase', 'Backend', 'Java', 'cpp', 'Android', 'Angular'],
+      labels: ['DataBase', 'Backend', 'Java', 'cpp', 'Android', 'FrontEnd'],
       datasets: [
         {
           label: 'My Confidence',
@@ -25,6 +26,63 @@ export class IntroductionComponent implements OnInit {
           data: [70, 85, 90, 65, 70, 90],
         },
       ],
+    };
+    this.updateChartOptions();
+  }
+  updateChartOptions() {
+    this.chartOptions =
+      this.config && this.config.dark
+        ? this.getDarkTheme()
+        : this.getLightTheme();
+  }
+
+  getLightTheme() {
+    return {
+      plugins: {
+        legend: {
+          labels: {
+            color: '#495057',
+          },
+        },
+      },
+      scales: {
+        r: {
+          pointLabels: {
+            color: '#495057',
+          },
+          grid: {
+            color: '#ebedef',
+          },
+          angleLines: {
+            color: '#ebedef',
+          },
+        },
+      },
+    };
+  }
+
+  getDarkTheme() {
+    return {
+      plugins: {
+        legend: {
+          labels: {
+            color: '#ebedef',
+          },
+        },
+      },
+      scales: {
+        r: {
+          pointLabels: {
+            color: '#ebedef',
+          },
+          grid: {
+            color: 'rgba(255,255,255,0.2)',
+          },
+          angleLines: {
+            color: 'rgba(255,255,255,0.2)',
+          },
+        },
+      },
     };
   }
 }

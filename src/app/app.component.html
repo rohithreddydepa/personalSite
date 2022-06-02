@@ -1,4 +1,7 @@
-<app-header></app-header>
-<!-- <app-video></app-video> -->
-<app-introduction></app-introduction>
-<app-footer></app-footer>
+<div [ngClass]="dark ? 'dark' : 'light'">
+  <app-header></app-header>
+  <!-- <app-video></app-video> -->
+  <app-introduction></app-introduction>
+  <app-projects></app-projects>
+  <app-footer></app-footer>
+</div>
