@@ -5,8 +5,6 @@
 export const environment = {
   production: false,
   baseUrl: 'http://localhost:8000',
-  // dark: !window.matchMedia('(prefers-color-scheme: dark)').matches,
-  dark: false,
 };
 
 /*

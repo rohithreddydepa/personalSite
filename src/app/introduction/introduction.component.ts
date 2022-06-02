@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
+import { ThemeService } from '../theme.service';
 @Component({
   selector: 'app-introduction',
   templateUrl: './introduction.component.html',
@@ -8,8 +9,7 @@ import { environment } from 'src/environments/environment';
 export class IntroductionComponent implements OnInit {
   data: any;
   chartOptions: any;
-  config = { dark: environment.dark };
-  constructor() {}
+  constructor(public theme: ThemeService) {}
 
   ngOnInit() {
     this.data = {
@@ -30,10 +30,9 @@ export class IntroductionComponent implements OnInit {
     this.updateChartOptions();
   }
   updateChartOptions() {
-    this.chartOptions =
-      this.config && this.config.dark
-        ? this.getDarkTheme()
-        : this.getLightTheme();
+    this.chartOptions = this.theme.dark
+      ? this.getDarkTheme()
+      : this.getLightTheme();
   }
 
   getLightTheme() {

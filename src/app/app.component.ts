@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { Title } from '@angular/platform-browser';
-import { environment } from 'src/environments/environment';
+import { ThemeService } from './theme.service';
 
 @Component({
   selector: 'app-root',
@@ -9,9 +8,9 @@ import { environment } from 'src/environments/environment';
 })
 export class AppComponent {
   title = 'Rohith Reddy Depa';
-  dark = environment.dark;
-  constructor(private titleService: Title) {
-    titleService.setTitle(this.title);
+  dark: boolean;
+  constructor(public theme: ThemeService) {
+    this.dark = theme.dark;
     console.log(this.dark);
   }
 }
