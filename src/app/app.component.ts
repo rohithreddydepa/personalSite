@@ -9,12 +9,16 @@ import { ThemeService } from './theme.service';
 })
 export class AppComponent implements OnInit {
   title = 'Rohith Reddy Depa';
-  dTheme: boolean = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  themeLink = this.document.getElementById('app-theme') as HTMLLinkElement;
+  dTheme = false;
   constructor(
     public themeSevice: ThemeService,
     @Inject(DOCUMENT) private document: Document
   ) {}
   ngOnInit(): void {
+    this.themeSevice.setTheme(
+      window.matchMedia('(prefers-color-scheme: dark)').matches
+    );
     this.themeSevice.getTheme().subscribe((data) => {
       this.dTheme = data;
     });
@@ -24,7 +28,6 @@ export class AppComponent implements OnInit {
     this.themeSevice.setTheme(!this.dTheme);
     this.setTheme();
   }
-  themeLink = this.document.getElementById('app-theme') as HTMLLinkElement;
   setTheme() {
     if (this.dTheme) {
       this.themeLink.href = 'dark.css';

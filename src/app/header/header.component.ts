@@ -10,9 +10,9 @@ export class HeaderComponent implements OnInit {
   data: any;
   constructor(private http: AppServiceService) {}
   ngOnInit(): void {
-    this.http.get('/data').subscribe((data) => {
-      this.data = data;
-      console.log(this.data);
-    });
+    // this.http.get('/data').subscribe((data) => {
+    //   this.data = data;
+    //   console.log(this.data);
+    // });
   }
 }
