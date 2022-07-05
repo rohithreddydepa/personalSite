@@ -17,18 +17,21 @@ export class ProjectsComponent implements OnInit {
         status: "Android App'S",
         icon: PrimeIcons.CIRCLE,
         readMore: false,
+        link: '',
         data: 'I have build some Android namely Brain trainer, Tic-tac toe, Location copier, Currency converter, Clone text .In brain trainer app user have to answer the the math questions as many as he can in 30s for each question and time gradually decreases for next question, Currency converter is an basic app which is used to convert the American dollars to Indian rupees.You can know the functionality of the other apps by visiting the github',
       },
       {
         status: 'Full Stack',
         icon: PrimeIcons.CIRCLE,
         readMore: false,
+        link: '',
         data: "Every Business starting from startup's to multi national companies they need a website to show case there products or services to the customer so bulding website should be very essential . As a full stack Web developer i can build a website from scratch and and deploye it on servers like aws or custom server using nodejs and mongodb.",
       },
       {
         status: 'Shipped',
         icon: PrimeIcons.CIRCLE,
         readMore: false,
+        link: '',
         data: '',
       },
 
@@ -36,6 +39,7 @@ export class ProjectsComponent implements OnInit {
         status: 'Delivered',
         icon: PrimeIcons.CIRCLE,
         readMore: false,
+        link: '',
         data: '',
       },
     ];

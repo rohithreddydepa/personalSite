@@ -1,25 +1,34 @@
-<p-timeline [value]="events1" align="alternate">
-  <ng-template pTemplate="marker" let-event>
-    <span class="custom-marker shadow-2" [style.backgroundColor]="event.color">
-      <i [ngClass]="event.icon"></i>
-    </span>
-  </ng-template>
-  <ng-template pTemplate="content" let-event>
-    <p-card [header]="event.status">
-      <p>
-        {{ event.data.substring(0, event.data.length / 2)
-        }}<span *ngIf="!event.readMore"> ...</span>
-        <span *ngIf="event.readMore">
-          {{ event.data.substring(event.data.length / 2) }}</span
+<div class="container-fluid component">
+  <h2 class="text-center heading">Projects</h2>
+  <p-timeline [value]="events1" align="alternate">
+    <ng-template pTemplate="marker" let-event>
+      <span
+        class="custom-marker shadow-2"
+        [style.backgroundColor]="event.color"
+      >
+        <i [ngClass]="event.icon"></i>
+      </span>
+    </ng-template>
+    <ng-template pTemplate="content" let-event>
+      <p-card>
+        <h4 class="text-center">
+          {{ event.status }}
+          <a href="{{ event.link }}" target="_blank">
+            <i class="pi pi-external-link"></i>
+          </a>
+        </h4>
+        <p>
+          {{ event.data.substring(0, 200)
+          }}<span *ngIf="!event.readMore"> ...</span>
+          <span *ngIf="event.readMore"> {{ event.data.substring(200) }}</span>
+        </p>
+        <button
+          class="btn btn-outline-primary"
+          (click)="readData(event.status)"
         >
-      </p>
-      <button
-        pButton
-        type="button"
-        [label]="event.readMore ? 'Show Less' : 'More'"
-        class="p-button-outlined"
-        (click)="readData(event.status)"
-      ></button>
-    </p-card>
-  </ng-template>
-</p-timeline>
+          {{ event.readMore ? "Show Less" : "Show More" }}
+        </button>
+      </p-card>
+    </ng-template>
+  </p-timeline>
+</div>

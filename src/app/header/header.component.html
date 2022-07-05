@@ -1,6 +1,18 @@
-<div class="header"></div>
+<div
+  class="header"
+  [ngStyle]="{
+    'background-image': dTheme
+      ? 'url(' + '../../assets/dark_pic.png' + ')'
+      : 'url(' + '../../assets/light_pic.png' + ')'
+  }"
+></div>
 <div class="content">
-  <span class="hi">I'm </span>
+  <span class="hi">Hello, </span>
   <br />
-  <span class="name">Rohith Reddy Depa</span>
+  <span class="name">I'M ROHITH</span>
+  <br />
+  <span class="cs">
+    Computer Science Engineer <br />
+    & Web Developer</span
+  >
 </div>

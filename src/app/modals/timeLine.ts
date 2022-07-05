@@ -4,4 +4,5 @@ export interface iTimeLine {
   color?: string;
   readMore: boolean;
   data: string;
+  link: string;
 }

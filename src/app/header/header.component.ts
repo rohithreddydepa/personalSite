@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AppServiceService } from '../app-service.service';
+import { ThemeService } from '../theme.service';
 
 @Component({
   selector: 'app-header',
@@ -8,11 +9,11 @@ import { AppServiceService } from '../app-service.service';
 })
 export class HeaderComponent implements OnInit {
   data: any;
-  constructor(private http: AppServiceService) {}
-  ngOnInit(): void {
-    // this.http.get('/data').subscribe((data) => {
-    //   this.data = data;
-    //   console.log(this.data);
-    // });
+  constructor(public themeService: ThemeService) {}
+  dTheme: boolean = false;
+  ngOnInit() {
+    this.themeService.getTheme().subscribe((data) => {
+      this.dTheme = data;
+    });
   }
 }

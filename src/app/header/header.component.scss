@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Lobster&family=Noticia+Text:ital@1&family=Sansita+Swashed:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Cinzel&display=swap");
 html {
   height: 100%;
   width: 100%;
@@ -14,11 +14,15 @@ body {
   .header {
     background-position: 80% !important;
   }
+  .content {
+    top: 40% !important;
+    left: 5% !important;
+  }
 }
 .header {
-  background: url("../../assets/rohith.jpg") no-repeat top center fixed;
+  background: no-repeat top center fixed;
   background-size: cover;
-  height: 765px;
+  height: 90vh;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -29,16 +33,21 @@ body {
 
 .content {
   position: absolute;
-  top: 39%;
+  top: 30%;
   left: 13%;
   margin-top: -29px;
-  color: black;
+  font-family: "Cinzel", serif;
 }
 .name {
-  font-size: 60px;
-  font-family: "Noticia Text", serif;
+  font-size: 50px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  word-spacing: 2px;
 }
 .hi {
-  font-family: "Sansita Swashed", cursive;
-  font-size: 35px;
+  font-size: 1rem;
+}
+.cs {
+  font-size: 25px;
+  line-height: 32px;
 }

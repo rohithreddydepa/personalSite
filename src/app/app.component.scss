@@ -9,14 +9,16 @@
 .theme-wrapper {
   z-index: 1000 !important;
   position: fixed;
-  left: 0;
+  right: 0;
   bottom: 70%;
-  height: 34px;
-  width: 36px;
-  border-top-right-radius: 50%;
-  border-bottom-right-radius: 50%;
-  background-color: #ececec;
+  height: 40px;
+  width: 40px;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  background-color: white;
   .theme-btn {
     height: 2rem;
+    margin-top: 4px;
+    padding-left: 6px;
   }
 }

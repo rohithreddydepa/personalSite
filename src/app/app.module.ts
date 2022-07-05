@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { VideoComponent } from './video/video.component';
 import { HttpClientModule } from '@angular/common/http';
 import { IntroductionComponent } from './introduction/introduction.component';
 import { FooterComponent } from './footer/footer.component';
@@ -18,7 +17,6 @@ import { SkillsComponent } from './skills/skills.component';
   declarations: [
     AppComponent,
     HeaderComponent,
-    VideoComponent,
     IntroductionComponent,
     FooterComponent,
     ProjectsComponent,
