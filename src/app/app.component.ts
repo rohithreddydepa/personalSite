@@ -11,6 +11,7 @@ export class AppComponent implements OnInit {
   title = 'Rohith Reddy Depa';
   themeLink = this.document.getElementById('app-theme') as HTMLLinkElement;
   dTheme = false;
+  toggleAnimation = false;
   constructor(
     public themeSevice: ThemeService,
     @Inject(DOCUMENT) private document: Document
@@ -25,8 +26,12 @@ export class AppComponent implements OnInit {
     this.setTheme();
   }
   changeTheme() {
-    this.themeSevice.setTheme(!this.dTheme);
-    this.setTheme();
+    this.toggleAnimation = true;
+    setTimeout(() => {
+      this.toggleAnimation = false;
+      this.themeSevice.setTheme(!this.dTheme);
+      this.setTheme();
+    }, 1400);
   }
   setTheme() {
     if (this.dTheme) {

@@ -1,4 +1,5 @@
 .dark {
+  transition: 1.5ms ease-in-out;
   background-color: #121212;
   color: white;
 }
@@ -9,16 +10,41 @@
 .theme-wrapper {
   z-index: 1000 !important;
   position: fixed;
-  right: 0;
-  bottom: 70%;
+  left: 0;
+  bottom: 20%;
   height: 40px;
   width: 40px;
-  border-top-left-radius: 50%;
-  border-bottom-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
   background-color: white;
   .theme-btn {
     height: 2rem;
     margin-top: 4px;
-    padding-left: 6px;
+    padding-left: 3px;
+    transition: 1ms ease-in-out;
+  }
+}
+.ripple {
+  height: 1px;
+  width: 1px;
+  position: fixed;
+  left: 0;
+  bottom: 20%;
+  z-index: 2;
+  border-radius: 50%;
+  transform: translate3d(-50%, 50%, 0);
+  animation-name: ripple;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  will-change: transform, opacity;
+}
+@keyframes ripple {
+  0% {
+    transform: translate3d(-50%, 50%, 0) scale(0);
+    opacity: 0.33;
+  }
+  100% {
+    transform: translate3d(-50%, 50%, 0) scale(5000);
+    opacity: 1;
   }
 }

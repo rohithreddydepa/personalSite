@@ -7,8 +7,12 @@
     class="theme-btn"
   />
 </div>
-<i class="fa-solid fa-circle-half-stroke theme-btn"></i>
 <div [ngClass]="dTheme ? 'dark' : 'light'">
+  <div
+    class="ripple"
+    *ngIf="toggleAnimation"
+    [ngStyle]="{ 'background-color': dTheme ? 'white' : 'black' }"
+  ></div>
   <app-header></app-header>
   <app-introduction></app-introduction>
   <app-skills></app-skills>
