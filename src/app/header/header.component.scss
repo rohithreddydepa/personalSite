@@ -1,24 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Acme&family=Cinzel&display=swap");
-html {
-  height: 100%;
-  width: 100%;
-}
 
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-}
-@media only screen and (max-width: 768px) {
-  .header {
-    background-position: 80% !important;
-  }
-  .content {
-    top: 40% !important;
-    left: 5% !important;
-  }
-}
 .header {
   background: no-repeat top center fixed;
   background-size: cover;
@@ -50,4 +31,13 @@ body {
 .cs {
   font-size: 25px;
   line-height: 32px;
+}
+@media only screen and (max-width: 768px) {
+  .header {
+    background-position: 80% !important;
+  }
+  .content {
+    top: 40% !important;
+    left: 5% !important;
+  }
 }
