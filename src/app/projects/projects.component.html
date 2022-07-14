@@ -10,25 +10,27 @@
       </span>
     </ng-template>
     <ng-template pTemplate="content" let-event>
-      <p-card>
-        <h4 class="text-center">
-          {{ event.status }}
-          <a href="{{ event.link }}" target="_blank">
-            <i class="pi pi-external-link"></i>
-          </a>
-        </h4>
-        <p>
-          {{ event.data.substring(0, 200)
-          }}<span *ngIf="!event.readMore"> ...</span>
-          <span *ngIf="event.readMore"> {{ event.data.substring(200) }}</span>
-        </p>
-        <button
-          class="btn btn-outline-primary"
-          (click)="readData(event.status)"
-        >
-          {{ event.readMore ? "Show Less" : "Show More" }}
-        </button>
-      </p-card>
+      <div data-aos="fade-left">
+        <p-card>
+          <h4 class="text-center">
+            {{ event.status }}
+            <a href="{{ event.link }}" target="_blank">
+              <i class="pi pi-external-link"></i>
+            </a>
+          </h4>
+          <p>
+            {{ event.data.substring(0, 200)
+            }}<span *ngIf="!event.readMore"> ...</span>
+            <span *ngIf="event.readMore"> {{ event.data.substring(200) }}</span>
+          </p>
+          <button
+            class="btn btn-outline-primary"
+            (click)="readData(event.status)"
+          >
+            {{ event.readMore ? "Show Less" : "Show More" }}
+          </button>
+        </p-card>
+      </div>
     </ng-template>
   </p-timeline>
 </div>

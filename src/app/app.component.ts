@@ -1,6 +1,7 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, Inject, OnInit } from '@angular/core';
 import { ThemeService } from './theme.service';
+import * as Aos from 'aos';
 
 @Component({
   selector: 'app-root',
@@ -17,6 +18,7 @@ export class AppComponent implements OnInit {
     @Inject(DOCUMENT) private document: Document
   ) {}
   ngOnInit(): void {
+    Aos.init();
     this.themeSevice.setTheme(
       window.matchMedia('(prefers-color-scheme: dark)').matches
     );

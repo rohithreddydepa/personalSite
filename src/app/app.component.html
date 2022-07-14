@@ -14,8 +14,14 @@
     [ngStyle]="{ 'background-color': dTheme ? 'white' : 'black' }"
   ></div>
   <app-header></app-header>
-  <app-introduction></app-introduction>
-  <app-skills></app-skills>
-  <app-projects></app-projects>
+  <div data-aos="fade-up">
+    <app-introduction></app-introduction>
+  </div>
+  <div data-aos="fade-up">
+    <app-skills></app-skills>
+  </div>
+  <div data-aos="fade-up">
+    <app-projects></app-projects>
+  </div>
   <app-footer></app-footer>
 </div>

@@ -30,6 +30,7 @@
               "src/styles.scss",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/primeicons/primeicons.css",
+              "node_modules/aos/dist/aos.css",
               "node_modules/primeng/resources/primeng.min.css",
               {
                 "input": "src/light.scss",
@@ -42,7 +43,7 @@
                 "inject": false
               }
             ],
-            "scripts": []
+            "scripts": ["node_modules/aos/dist/aos.js"]
           },
           "configurations": {
             "production": {
