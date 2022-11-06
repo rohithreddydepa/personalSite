@@ -20,7 +20,7 @@
           </h4>
           <p>
             {{ event.data.substring(0, 200)
-            }}<span *ngIf="!event.readMore"> ...</span>
+            }}<span *ngIf="!event.readMore">...</span>
             <span *ngIf="event.readMore"> {{ event.data.substring(200) }}</span>
           </p>
           <button
